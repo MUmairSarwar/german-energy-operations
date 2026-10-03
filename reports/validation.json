@@ -5,6 +5,8 @@
   "dbt_data_tests_passed": 20,
   "dbt_models_built": 6,
   "api_download_required_for_rebuild": false,
-  "github_ci_status": "not yet published",
-  "scope": "2025 Europe/Berlin; full source snapshot; dashboard default, empty filter, capacity and cost controls"
+  "github_ci_status": "success",
+  "scope": "2025 Europe/Berlin; full source snapshot; dashboard default, empty filter, capacity and cost controls",
+  "validated_commit": "ec4b987695a91d8ad98be1d9017601410b55cf5a",
+  "github_ci_url": "https://github.com/MUmairSarwar/german-energy-operations/actions/runs/37141297492"
 }

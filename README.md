@@ -12,7 +12,7 @@ Built for an independent analytics portfolio by **Muhammad Umair Sarwar**. Uses 
 
 - **Business reader:** [Executive decision memo](reports/executive_summary.md)
 - **Technical reviewer:** [SQL scheduling logic](dbt/models/marts/mart_schedule.sql), [data contracts](src/energy_ops/normalize.py), [tests](tests/)
-- **Reproduce:** follow the five commands below; the source snapshot is included and the analysis runs offline
+- **Reproduce:** follow the commands below; the source snapshot is included and the analysis runs offline
 - **Learn and explain:** [Interview walkthrough](docs/interview_walkthrough.md)
 
 ## Findings from the included snapshot
@@ -44,7 +44,7 @@ These figures exclude tariffs, taxes, start/stop costs, staffing, throughput and
 - **Interval contracts:** correctly handles the 1 October 2025 transition from hourly to 15-minute prices.
 - **Timezone integrity:** UTC joins, Europe/Berlin operating dates, and tested 23/25-hour days.
 - **Analytics engineering:** six dbt models, a date dimension, a quarter-hour fact and three business marts, with generated lineage/catalog documentation.
-- **Quality assurance:** 20 dbt data tests and 24 Python/dashboard tests passed locally. Checksums, missingness, duplicates, units and cost reconciliation are explicit.
+- **Quality assurance:** 20 dbt data tests and 24 Python/dashboard tests passed locally and in GitHub Actions. Checksums, missingness, duplicates, units and cost reconciliation are explicit.
 - **SQL decision logic:** CTEs, joins, rolling windows, eligible-candidate validation and deterministic minimum-cost selection.
 - **Reproducibility:** licensed source snapshot, source URLs/hashes, dependency lock, offline rebuild and GitHub Actions configuration.
 - **Communication:** Streamlit dashboard, CSV exports, executive memo and interview study guide.
