@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "german-energy-operations"
+version = "0.1.0"
+description = "Auditable German electricity analytics and operating-schedule simulation"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.2,<3", "duckdb>=1.2,<2", "dbt-duckdb>=1.9,<2", "streamlit>=1.40,<2", "plotly>=5.24,<7", "matplotlib>=3.9,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

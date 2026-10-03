@@ -1,0 +1,18 @@
+{
+  "price": {
+    "url": "https://api.energy-charts.info/price?bzn=DE-LU&start=2025-01-01&end=2025-12-31",
+    "sha256_original_response": "6027e994c2e73fc1aec3b9a226a027676349e0d5c47957995b63a1ff35a7404a",
+    "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+    "source_rows": 15387
+  },
+  "power": {
+    "url": "https://api.energy-charts.info/public_power?country=de&start=2025-01-01&end=2025-12-31",
+    "sha256_original_response": "6a6b8365901d2842ef3e2bf36db1061eb9c4b59950f7ceb15af4fe7c152f2bcb",
+    "license": "CC BY 4.0; Energy-Charts.info (API default)",
+    "source_rows": 35040
+  },
+  "snapshot_created_utc": "2026-10-03T11:50:16.298176+00:00",
+  "snapshot_sha256": "6352802d33c9a5604498516b9cb2477dce673dfcbdb3b80a4a8f68cbd9679679",
+  "scope": "2025 Europe/Berlin; DE-LU prices and German generation/load",
+  "transformation": "Price response unchanged; power response restricted to Load, Solar, Wind onshore and Wind offshore."
+}

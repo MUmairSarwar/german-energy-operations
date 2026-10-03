@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    description: Checksum-verified public Energy-Charts 2025 snapshot, normalized in Python.
+    tables:
+      - name: time_spine
+      - name: prices
+      - name: power

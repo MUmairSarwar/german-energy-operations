@@ -1,0 +1,12 @@
+name: energy_ops
+version: '1.0.0'
+config-version: 2
+profile: energy_ops
+model-paths: [models]
+test-paths: [tests]
+models:
+  energy_ops:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

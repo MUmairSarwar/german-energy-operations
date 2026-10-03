@@ -1,0 +1,16 @@
+{
+  "quarter_hours": 35040.0,
+  "priced_hours": 8760.0,
+  "mean_price_eur_mwh": 89.32172260273832,
+  "min_price_eur_mwh": -250.32,
+  "max_price_eur_mwh": 583.4,
+  "negative_price_hours": 574.75,
+  "wind_solar_load_ratio": 0.4321229054850204,
+  "eligible_days": 365,
+  "baseline_cost_eur_per_mw": 121261.79000000001,
+  "flexible_cost_eur_per_mw": 69896.85500000001,
+  "gross_difference_eur_per_mw": 51364.935000000005,
+  "days_changed": 365,
+  "gross_reduction_pct": 42.3587141505993,
+  "break_even_cost_per_changed_day_eur_per_mw": 140.7258493150685
+}

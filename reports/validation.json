@@ -1,0 +1,10 @@
+{
+  "validation": "local execution",
+  "python": "3.12.14",
+  "python_tests_passed": 24,
+  "dbt_data_tests_passed": 20,
+  "dbt_models_built": 6,
+  "api_download_required_for_rebuild": false,
+  "github_ci_status": "not yet published",
+  "scope": "2025 Europe/Berlin; full source snapshot; dashboard default, empty filter, capacity and cost controls"
+}

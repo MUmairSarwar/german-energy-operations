@@ -1,0 +1,7 @@
+energy_ops:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('ENERGY_DB_PATH', '../warehouse/energy.duckdb') }}"
+      threads: 2

@@ -1,0 +1,42 @@
+version: 2
+models:
+  - name: stg_market
+    description: Expected UTC quarter-hour spine left-joined with source prices and power.
+    columns:
+      - name: ts_utc
+        data_tests: [unique, not_null]
+  - name: dim_date
+    description: Local calendar dimension with 23/24/25-hour daylight-saving days.
+    columns:
+      - name: local_date
+        data_tests: [unique, not_null]
+  - name: fct_market_quarter
+    description: Quarter-hour fact. Prices EUR/MWh, power MW, energy MWh. Not a customer bill.
+    columns:
+      - name: ts_utc
+        data_tests: [unique, not_null]
+      - name: local_date
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: local_date
+      - name: price_eur_mwh
+        description: DE-LU day-ahead price; negatives are valid. Nulls are monitored, never zero-filled.
+  - name: mart_daily
+    description: Daily coverage-aware market KPIs; wind/solar divided by load is not total renewables share.
+    columns:
+      - name: local_date
+        data_tests: [unique, not_null]
+  - name: mart_schedule
+    description: Historical gross energy-only cost difference for a hypothetical flexible process.
+    columns:
+      - name: local_date
+        data_tests: [unique, not_null]
+      - name: gross_difference_eur_per_mw
+        data_tests: [not_null]
+  - name: mart_quality
+    description: Monthly completeness and market signals; negative prices are not data errors.
+    columns:
+      - name: month
+        data_tests: [unique, not_null]

@@ -1,0 +1,31 @@
+name: Validate analytics
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      DBT_SEND_ANONYMOUS_USAGE_STATS: 'false'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m pip install --no-deps -e .
+      - run: python -m energy_ops.pipeline
+      - run: python -m pytest -q
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validated-reports-and-dbt-docs
+          path: |
+            reports/
+            dbt/target/manifest.json
+            dbt/target/run_results.json
+            dbt/target/catalog.json
+            dbt/target/index.html
