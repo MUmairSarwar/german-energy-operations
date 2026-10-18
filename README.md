@@ -2,6 +2,8 @@
 
 **A reproducible Python + SQL + dbt project that connects data quality to an operational decision.**
 
+**Published:** October 2026
+
 > For a process that must run for four consecutive hours, how much historical wholesale-energy cost difference could a flexible start time offer—and what assumptions could invalidate it?
 
 ![Market analysis and scheduling scenario](reports/overview.png)
@@ -13,7 +15,6 @@ Built for an independent analytics portfolio by **Muhammad Umair Sarwar**. Uses 
 - **Business reader:** [Executive decision memo](reports/executive_summary.md)
 - **Technical reviewer:** [SQL scheduling logic](dbt/models/marts/mart_schedule.sql), [data contracts](src/energy_ops/normalize.py), [tests](tests/)
 - **Reproduce:** follow the commands below; the source snapshot is included and the analysis runs offline
-- **Learn and explain:** [Interview walkthrough](docs/interview_walkthrough.md)
 
 ## Findings from the included snapshot
 
@@ -114,7 +115,7 @@ Read the [methodology](docs/methodology.md) before interpreting results.
 
 This repository implements local DuckDB/dbt and Streamlit. It does **not** claim Power BI, Airflow, Snowflake or production-cloud deployment. Power BI semantic modelling and a more realistic operating calendar are useful next extensions. The year and market-resolution boundary are deliberately fixed to 2025; changing the year requires updating and testing that contract.
 
-[Career research](docs/career_research.md) explains why the project complements the existing retail, churn and weather portfolio. Employer examples are skill signals, not guaranteed job matches. AI assistance was used in development; the walkthrough supports hands-on learning and honest interview preparation.
+AI assistance was used in development.
 
 ## Sources and licences
 
