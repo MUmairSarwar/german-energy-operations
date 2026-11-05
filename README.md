@@ -10,6 +10,15 @@
 
 Built for an independent analytics portfolio by **Muhammad Umair Sarwar**. Uses real, openly licensed 2025 data; no private employer or customer data. **Scenario outputs are not achieved business savings.**
 
+
+## Data period and version history
+
+- **Observation period:** the 2025 calendar year, covering DE-LU day-ahead prices and German generation/load.
+- **3 October 2026:** the source snapshot was created and the pipeline, dashboard and tests were committed. The exact snapshot timestamp and hashes are in [data/provenance.json](data/provenance.json).
+- **18 October 2026:** publication notes and licensing text were updated.
+
+The current reported analysis uses the October 2026 download of 2025 data. Data coverage, snapshot acquisition, development and GitHub publication are different dates.
+
 ## Start here
 
 - **Business reader:** [Executive decision memo](reports/executive_summary.md)
