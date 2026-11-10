@@ -4,7 +4,7 @@
 
 **Published:** October 2026
 
-> For a process that must run for four consecutive hours, how much historical wholesale-energy cost difference could a flexible start time offer—and what assumptions could invalidate it?
+> For a process that must run for four consecutive hours, how much historical wholesale-energy cost difference could a flexible start time offer, and what assumptions could invalidate it?
 
 ![Market analysis and scheduling scenario](reports/overview.png)
 
@@ -17,7 +17,7 @@ Built for an independent analytics portfolio by **Muhammad Umair Sarwar**. Uses 
 - **3 October 2026:** the source snapshot was created and the pipeline, dashboard and tests were committed. The exact snapshot timestamp and hashes are in [data/provenance.json](data/provenance.json).
 - **18 October 2026:** publication notes and licensing text were updated.
 
-The current reported analysis uses the October 2026 download of 2025 data. Data coverage, snapshot acquisition, development and GitHub publication are different dates.
+All reported numbers come from the October 2026 download of the 2025 data.
 
 ## Start here
 
@@ -49,7 +49,7 @@ These figures exclude tariffs, taxes, start/stop costs, staffing, throughput and
 
 **Decision:** the scenario motivates evaluating a constrained shadow pilot, not claiming savings. The dashboard lets a reviewer vary process power and an assumed per-day rescheduling cost to see how fragile the gross difference may be.
 
-## What makes this technically useful
+## Technical details
 
 - **Interval contracts:** correctly handles the 1 October 2025 transition from hourly to 15-minute prices.
 - **Timezone integrity:** UTC joins, Europe/Berlin operating dates, and tested 23/25-hour days.
@@ -57,7 +57,7 @@ These figures exclude tariffs, taxes, start/stop costs, staffing, throughput and
 - **Quality assurance:** 20 dbt data tests and 24 Python/dashboard tests passed locally and in GitHub Actions. Checksums, missingness, duplicates, units and cost reconciliation are explicit.
 - **SQL decision logic:** CTEs, joins, rolling windows, eligible-candidate validation and deterministic minimum-cost selection.
 - **Reproducibility:** licensed source snapshot, source URLs/hashes, dependency lock, offline rebuild and GitHub Actions configuration.
-- **Communication:** Streamlit dashboard, CSV exports, executive memo and interview study guide.
+- **Communication:** Streamlit dashboard, CSV exports and an executive memo.
 
 ## Run locally
 
@@ -105,7 +105,7 @@ flowchart LR
 | `tests/` | Synthetic edge cases, direct SQL fixtures and dashboard interactions |
 | `data/` | Reduced compressed source snapshot, attribution and provenance |
 | `reports/` | Measured metrics, CSV marts, overview graphic and decision memo |
-| `docs/` | Methodology, career rationale and interview walkthrough |
+| `docs/` | Methodology notes |
 | `.github/workflows/ci.yml` | Offline-data build and tests on pushes/PRs |
 
 ## Metric contract
@@ -123,8 +123,6 @@ Read the [methodology](docs/methodology.md) before interpreting results.
 ## Scope and next steps
 
 This repository implements local DuckDB/dbt and Streamlit. It does **not** claim Power BI, Airflow, Snowflake or production-cloud deployment. Power BI semantic modelling and a more realistic operating calendar are useful next extensions. The year and market-resolution boundary are deliberately fixed to 2025; changing the year requires updating and testing that contract.
-
-AI assistance was used in development.
 
 ## Sources and licences
 

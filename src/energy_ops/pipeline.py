@@ -1,4 +1,4 @@
-"""Build local warehouse, execute dbt tests, export recruiter-readable results."""
+"""Build the local warehouse, run the dbt tests and export the reports."""
 from __future__ import annotations
 import argparse
 import gzip
