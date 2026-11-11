@@ -119,6 +119,6 @@ Data from [Energy-Charts.info](https://api.energy-charts.info/) (Fraunhofer ISE)
 
 ## History
 
-The data snapshot was taken on 3 October 2026, and the [pipeline, dashboard and tests](https://github.com/MUmairSarwar/german-energy-operations/commit/ec4b987) were committed the same day. The snapshot covers 2025 and is the source of the reported results.
+I worked on the initial analysis from January to March 2026. The data snapshot was taken on 3 October 2026, and the [pipeline, dashboard and tests](https://github.com/MUmairSarwar/german-energy-operations/commit/ec4b987) were committed the same day. The snapshot covers 2025 and is the source of the reported results.
 
 Author: [Muhammad Umair Sarwar](https://github.com/MUmairSarwar) · [LinkedIn](https://www.linkedin.com/in/muhammad-umair-sarwar/)
