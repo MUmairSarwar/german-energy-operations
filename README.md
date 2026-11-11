@@ -1,8 +1,8 @@
-# German Energy Operations Analytics
+# German Energy Operations
 
 [![Validate analytics](https://github.com/MUmairSarwar/german-energy-operations/actions/workflows/ci.yml/badge.svg)](https://github.com/MUmairSarwar/german-energy-operations/actions/workflows/ci.yml)
 
-A Python, SQL and dbt project on 2025 German electricity data. It builds a tested DuckDB warehouse from public day-ahead prices and generation/load data, and uses it for one concrete question:
+I built a DuckDB warehouse in Python, SQL and dbt from public 2025 day-ahead prices and German generation and load data. I used it to compare a fixed start with flexible scheduling and built a dashboard to make the assumptions inspectable.
 
 > A process has to run for four consecutive hours every day. If its start time could move between 06:00 and 18:00, how much lower would its 2025 day-ahead energy cost have been than with a fixed 08:00 start, and which assumptions could make that number meaningless?
 
@@ -81,7 +81,7 @@ python -m pytest -q
 python -m streamlit run app.py
 ```
 
-Run the commands from the repository root. Installation needs internet access; the pipeline itself works offline from the included snapshot. It stops before exporting reports if a dbt test fails, but reports from an earlier run are not deleted, so check the exit status. The same steps are available as `make setup`, `make analyse`, `make test` and `make dashboard`.
+Run the commands from the repository root in that order. Installation needs internet access. The pipeline works offline from the included snapshot and creates `warehouse/energy.duckdb`, which the dashboard tests and Streamlit app read. If a dbt test fails, the pipeline exits before exporting fresh reports and earlier reports stay on disk. The same steps are available as `make setup`, `make analyse`, `make test` and `make dashboard`.
 
 To download the data again (only when intended, since the API may have revised values):
 
@@ -119,6 +119,6 @@ Data from [Energy-Charts.info](https://api.energy-charts.info/) (Fraunhofer ISE)
 
 ## History
 
-The data snapshot was taken on 3 October 2026, and the pipeline, dashboard and tests were committed the same day. Later commits changed documentation and licence text only. All numbers above come from that snapshot of 2025 data.
+The data snapshot was taken on 3 October 2026, and the [pipeline, dashboard and tests](https://github.com/MUmairSarwar/german-energy-operations/commit/ec4b987) were committed the same day. The snapshot covers 2025 and is the source of the reported results.
 
 Author: [Muhammad Umair Sarwar](https://github.com/MUmairSarwar) · [LinkedIn](https://www.linkedin.com/in/muhammad-umair-sarwar/)
